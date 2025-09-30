@@ -1,4 +1,16 @@
 import unittest
+
+from pathlib import Path
+import sys
+
+# add project root (one level up from /tests) to sys.path
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from src.calculator import add, subtract, divide
+
+
+
 from src.calculator import add, subtract, divide
 
 class TestCalculator(unittest.TestCase):
